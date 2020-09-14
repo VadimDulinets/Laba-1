@@ -1,0 +1,18 @@
+#include <iostream>
+#include <string>
+#include <iomanip> 
+using namespace std;
+
+int main() {
+	int a;
+	string str1, str2;
+	cout << "Enter first string: ";
+	getline(cin, str1);
+	cout << "Enter second string: ";
+	getline(cin, str2);
+	a = str1.length() + str2.length();
+	if (str1.length() >= str2.length()) {
+		cout << setfill('*') << setw(a) << left << str1;
+	}
+	else cout << setfill('*') << setw(a) << left << str2;
+}
